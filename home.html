@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Welcome, <span th:text="${user.username}">User</span>!</h1>
+    <div th:if="${user.role == 'ROLE_ADMIN'}">
+        <h2>Admin Features</h2>
+        <p>Access to all features.</p>
+    </div>
+    <div th:if="${user.role == 'ROLE_GUEST'}">
+        <h2>Guest Features</h2>
+        <p>Limited access.</p>
+    </div>
+</body>
+</html>
