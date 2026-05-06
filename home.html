@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
     <title>Home Page</title>
+    <style>
+        :focus { outline: 2px solid blue; }
+    </style>
 </head>
 <body>
     <h1>Welcome, <span th:text="${user.username}">User</span>!</h1>
